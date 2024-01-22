@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <script src="donation.js"></script>
+
+    <link rel="stylesheet" href="style.css" />
+    <div class="tb_container">
+      <div class="tb_containter_inside">
+        <header class="tb_header">
+          <div id="tb_storeHeader" style="text-align: center">{StoreHeader}</div>
+        </header>
+        <div class="tb_track_info">
+          <div class="tb_track_container">
+            <div class="tb_track_circle tb_track_circle_active">
+              <div class="tb_track_number tb_track_number_active">1</div>
+            </div>
+            <div class="tb_track_name tb_track_name_active">Amount</div>
+            <div class="tb_track_arrow">
+              <img src="https://svgshare.com/i/12F9.svg" alt="Arrow" />
+            </div>
+          </div>
+          <div class="tb_track_container">
+            <div class="tb_track_circle">
+              <div class="tb_track_number">2</div>
+            </div>
+            <div class="tb_track_name">Details</div>
+            <div class="tb_track_arrow">
+              <img src="https://svgshare.com/i/12F9.svg" alt="Arrow" />
+            </div>
+          </div>
+          <div class="tb_track_container">
+            <div class="tb_track_circle">
+              <div class="tb_track_number">3</div>
+            </div>
+            <div class="tb_track_name">Payment</div>
+          </div>
+        </div>
+
+        <section id="tb_productSection-summary" class="tb_section">
+          <div id="tb_productGrid" class="tb_product-grid">
+            <!-- Products will be dynamically populated here -->
+          </div>
+          <div class="tb_checkout tb_hidden" id="tb_checkout_div">
+            <button id="tb_checkOutBtn" class="tb_standard-btn tb_checkout-btn">
+              <div class="tb_button_holder">
+                <div class="tb_button_text">{CheckoutButtonText}</div>
+                <div class="tb_button_image_hold">
+                  <div class="tb_button_image">
+                    <img
+                      src="https://svgshare.com/i/12Fp.svg"
+                      alt="Cincinnati Bearcats Logo"
+                    />
+                  </div>
+                </div>
+              </div>
+            </button>
+          </div>
+        </section>
+        <section id="tb_productSection-product" class="tb_section">
+          <div id="tb_productDetails" class="tb_product_details">
+            <!-- product details will be populated here-->
+          </div>
+        </section>
+
+        <section id="tb_summarySection" class="tb_section">
+          <div class="tb_orderBeginWrapper">
+            <!--h1>Order Summary</h1//-->
+            <div class="tb_product-summary">
+              <table id="tb_summaryTable">
+                <thead>
+                  <tr>
+                    <th></th>
+                    <th>{NameHeader}</th>
+                    <th>{QuantityHeader}</th>
+                    <th>{PriceHeader}</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody id="tb_summaryTableBody">
+                  <!-- Summary table rows will be dynamically populated here -->
+                </tbody>
+                <tfoot>
+                  <tr class="tb_donation_total">
+                    <td colspan="3" align="right">{TotalLabel}</td>
+                    <td
+                      id="tb_summaryTotalPrice"
+                      class="tb_product-price tb_totalPrice"
+                    ></td>
+                    <td></td>
+                  </tr>
+                </tfoot>
+              </table>
+              <div class="tb_productTransaction">
+                <form id="tb_dynamic-form">
+                  <ul id="tb_breadcrumb" class="tb_breadcrumb"></ul>
+                  <div id="tb_transactionSettings">
+                    <!-- fields / forms necessary for the transaction will be populated here dynamically -->
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="tb_successSection" class="tb_section">
+          <div id="tb_successMessage" class="tb_success-message">
+            <!-- success message will be populated here -->
+          </div>
+        </section>
+
+        <template id="tb_productTemplate">
+          <div class="tb_product-attributes">
+            <div class="tb_amount_given">Amount to be given</div>
+            <div class="tb_product-quantity"></div>
+            <div class="tb_checkout tb_hidden">
+              <button
+                id="tb_checkOutBtn"
+                class="tb_standard-btn tb_checkout-btn"
+              >
+                <div class="tb_button_holder">
+                  <!-- shortcuts {CheckoutButtonText} -->
+                  <div class="tb_button_text">Donate Now</div>
+                  <div class="tb_button_image_hold">
+                    <div class="tb_button_image">
+                      <img
+                        src="https://svgshare.com/i/12Fp.svg"
+                        alt="Cincinnati Bearcats Logo"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </button>
+            </div>
+          </div>
+        </template>
+
+        <template id="tb_summaryTemplate">
+          <div class="tb_product-item">
+            <div class="tb_product-image-summary">
+              <!--img class="tb_product-image tb_center" src="" alt=""//-->
+            </div>
+          </div>
+        </template>
+
+        <template id="tb_summaryRowTemplate_DNU">
+          <tr data-id="">
+            <td class="tb_summary-product-image-summary"></td>
+            <td class="tb_summary-product-name"></td>
+            <td class="tb_summary-product-quantity"></td>
+            <td class="tb_summary-product-price"></td>
+            <td class="tb_summary_10">
+              <img
+                id="tb_remove_btn"
+                class="tb_product-remove-btn"
+                src="./img/common/delete.png"
+                alt="{RemoveButtonAlt}"
+                border="0"
+              />
+            </td>
+          </tr>
+        </template>
+
+        <template id="tb_quantitySelectorTemplate">
+          <div class="tb_quantity-selector-container">
+            <label
+              id="tb_quantityLabel"
+              for="tb_quantity"
+              class="tb_quantity-label"
+              >{QuantityLabel}</label
+            >
+            <input
+              id="tb_quantity"
+              class="tb_quantity-selector"
+              type="number"
+              min="0"
+              value="0"
+            />
+          </div>
+        </template>
+      </div>
+    </div>
+  </body>
+</html>

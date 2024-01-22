@@ -1,0 +1,916 @@
+body {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+    sans-serif;
+  font-size: 16px;
+  background: linear-gradient(to bottom, #000000, #a30e1d) !important;
+  min-height: 100vh;
+  margin: 0; /* Optionally, remove any default margin */
+}
+.tb_container {
+  width: 827px;
+
+  border-radius: 21px;
+  background-color: #ffffff;
+  color: #000000 !important;
+  overflow-y: auto;
+}
+.tb_containter_inside {
+  padding: 16px 16px 36px 16px;
+}
+.tb_header {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+#tb_storeHeader {
+  width: 100%;
+  margin: 0px;
+}
+.tb_track_info {
+  width: 100%;
+  display: flex;
+  background-color: #f5f8fa;
+  border-radius: 100px;
+  justify-content: space-between;
+}
+.tb_track_container {
+  display: flex;
+  align-items: center;
+  padding: 10px 34px;
+}
+.tb_track_circle {
+  background-color: #e1e1e6;
+  width: 24px;
+  height: 24px;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 8px;
+}
+.tb_track_circle_active {
+  background-color: #ef0325;
+  width: 24px;
+  height: 24px;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.tb_track_name {
+  color: #6b7578;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: -0.32px;
+}
+.tb_track_arrow {
+  padding-left: 100px;
+}
+.tb_track_name_active {
+  color: #000000;
+}
+.tb_track_number {
+  color: #6b7578;
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: -0.28px;
+}
+.tb_track_number_active {
+  color: #ffffff;
+}
+.tb_center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+.tb_hidden {
+  display: none;
+}
+.tb_visible {
+  display: block;
+}
+.tb_back {
+  /*display: none;*/
+}
+
+.tb_product-grid {
+  padding-inline-start: 0px;
+  list-style: none;
+}
+.tb_expand-button {
+  cursor: pointer;
+  font-size: 20px;
+  width: 40px;
+  background-color: #ffffff;
+  border: none;
+}
+@media (min-width: 240px) {
+  .tb_product-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.tb_product-details-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.tb_product-details-image {
+  flex: 0.25;
+}
+.tb_product-details {
+  flex: 0.75;
+}
+.tb_product-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #eeeeee;
+  border-left: 1px solid #eeeeee;
+  border-right: 1px solid #eeeeee;
+  cursor: pointer;
+  width: 100%;
+  background-color: #ffffff;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.tb_product-item:last-child {
+  border-bottom: 1px solid #eeeeee;
+}
+.tb_product-item-data-element {
+  flex: 0 0 calc(33.3333% - 10px); /* Set the width of each item (adjust as needed) */
+  display: flex;
+  justify-content: space-between;
+}
+.tb_product-item-button {
+  flex: 0.1;
+  background-color: #ffffff;
+}
+.tb_productNamePriceRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.tb_product-image-summary {
+  height: 150px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.tb_product-image-social {
+  height: 80px;
+  width: auto; /* Maintain aspect ratio */
+  margin-right: 10px;
+  margin-left: 10px;
+  border-radius: 5px; /* Add rounded corners to thumbnails */
+}
+.tb_product-image-wrapper {
+  flex: 0.3;
+}
+.tb_product-image {
+  width: 95%;
+  /*
+max-height: 150px;
+object-fit: cover;
+*/
+  vertical-align: middle;
+}
+.tb_product-summary-details {
+  flex: 0.6;
+}
+.tb_product-image-details {
+  width: 100%;
+  object-fit: cover;
+}
+
+.tb_product-quantity {
+  text-align: center;
+}
+
+.tb_product-attributes {
+  width: 100%;
+  margin-top: 24px;
+}
+
+.tb_amount_given {
+  color: #000;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: -0.32px;
+}
+
+.tb_product-name {
+  font-weight: normal;
+}
+.tb_product-description {
+  display: none;
+}
+.tb_product-price {
+  text-align: right;
+  font-weight: bold;
+}
+
+/* SUMMARY TABLE */
+.tb_summary-product-image-summary {
+  width: 10%;
+}
+
+.tb_summary-product-image {
+  width: 95%;
+  max-height: 150px;
+  /*
+object-fit: cover;
+*/
+  vertical-align: middle;
+}
+
+.tb_summary-product-quantity {
+  width: 10%;
+  text-align: center;
+}
+
+.tb_summary-product-name {
+  width: 40%;
+  font-weight: normal;
+  text-overflow: ellipsis;
+}
+.tb_summary-product-description {
+  display: none;
+}
+.tb_summary-product-price {
+  text-align: right;
+  width: 30%;
+  font-weight: bold;
+}
+
+.tb_quantity-selector {
+  margin: 5px;
+  width: 50px;
+  padding: 5px;
+  font-size: 12pt;
+}
+.tb_top {
+  position: sticky;
+  top: 0;
+  padding-top: 5px;
+  padding-right: 5px;
+}
+.tb_checkout {
+  position: sticky;
+  bottom: 0;
+  text-align: center;
+  background-color: #ffffff;
+  margin: 20px;
+}
+/* BUTTONS */
+.tb_quantity-label {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.tb_standard-btn {
+  color: #fff;
+  background-color: #898989;
+  height: 70px;
+  padding: 6px 6px 6px 32px;
+  border: none;
+  border-radius: 100px;
+  transition: background 0.1s;
+  cursor: pointer;
+}
+.tb_button_holder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+.tb_button_text {
+  color: #fff;
+  text-align: center;
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: -0.4px;
+}
+.tb_button_image_hold {
+  height: 42px;
+  width: 42px;
+  border-radius: 100%;
+  background: rgba(255, 255, 255, 0.22);
+}
+.tb_button-container {
+}
+.tb_donation-options-button {
+  width: 170px;
+  height: 68px;
+  flex-shrink: 0;
+  border-radius: 14px;
+  border: 1px solid #e6e6e6;
+
+  background-color: #ffffff;
+  text-transform: uppercase;
+  text-align: center;
+  transition: background 0.1s;
+  cursor: pointer;
+
+  color: #898989;
+
+  font-family: Poppins;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: -0.4px;
+}
+
+.tb_donation-options-button:hover {
+  /* color: rgb(255, 255, 255); */
+  /*background-color: rgb(184, 1, 28);  Darker green on hover */
+  /*background-color: #45a049;*/ /* Darker green on hover */
+}
+.tb_donation-options-button_selected {
+  border: solid 2px rgb(224, 1, 34);
+  color: #5d625f;
+  background-color: rgb(224, 1, 34, 0.4);
+}
+
+.tb_donate-button {
+  border-color: rgb(224, 1, 34);
+  color: rgb(224, 1, 34);
+  background-color: transparent;
+  margin: 5px;
+  padding: 7px 20px 7px 20px;
+  box-shadow: 8px 8px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 6px;
+  border-width: 2px;
+  border-style: solid;
+  font-family: Jost, sans-serif;
+  font-weight: 500;
+  font-size: 0.85em;
+  text-transform: uppercase;
+  text-align: center;
+  transition: background 0.1s;
+  cursor: pointer;
+}
+
+.tb_donate-button:hover {
+  color: rgb(255, 255, 255);
+  background-color: rgb(184, 1, 28); /* Darker green on hover */
+  /*background-color: #45a049;*/ /* Darker green on hover */
+}
+.tb_donate-button_selected {
+  border: solid 2px rgb(224, 1, 34);
+  color: #5d625f;
+  background-color: rgb(224, 1, 34, 0.4);
+}
+.tb_float_right {
+  float: right;
+}
+.tb_donation_total {
+  font-size: 20px;
+  font-weight: bold;
+  color: rgb(224, 1, 34);
+  margin: 10px;
+}
+.tb_product-summary {
+  margin-top: 20px;
+  min-width: 300px;
+}
+
+.tb_product-summary-header {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.tb_product-remove-btn {
+  width: 20px !important;
+  height: 20px !important;
+  border: none !important;
+  padding-left: 5px !important;
+  padding-top: 5px !important;
+  cursor: pointer;
+}
+.tb_total-price {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.tb_payment-header {
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+.tb_success-section {
+  text-align: center;
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #c3e6cb;
+  color: #155724;
+  font-weight: bold;
+}
+
+.tb_cart-shadow {
+  animation: tb-cart-shadow 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes tb-cart-shadow {
+  from {
+    filter: drop-shadow(0 0 5px #fff) drop-shadow(0 0 15px #ffae00)
+      drop-shadow(0 0 20px #ffae00);
+  }
+
+  to {
+    filter: drop-shadow(0 0 20px #fff) drop-shadow(0 0 25px #ffd900)
+      drop-shadow(0 0 40px #ffd900);
+  }
+}
+
+#tb_summaryTable > thead > tr > th {
+  text-align: center;
+}
+
+.tb_summaryTableImage {
+  max-height: 40px;
+  max-width: 40px;
+}
+#tb_summaryTable {
+  font-size: 10pt;
+}
+.tb_summary_10 {
+  width: 10%;
+}
+/* PAYMENT TABS */
+.tb_paymentsOptions {
+  padding-top: 10px;
+}
+.tb_saved-payments {
+  padding-top: 10px;
+}
+.tb_savedCard {
+  padding-top: 5px;
+}
+.tb_checkoutTabs {
+  display: flex;
+}
+.tb_tab {
+  flex: 1;
+  text-align: center;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-bottom: none;
+  cursor: pointer;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  font-size: 10pt;
+}
+.tb_tab_active {
+  background-color: #1d1b1b;
+  color: #fff;
+}
+.tb_tab-content {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-top: none;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+.tb_buyWithSavedPayment {
+  text-align: right;
+  padding-top: 5px;
+}
+.tb_flex_group {
+  display: flex;
+  align-items: center;
+}
+
+/* CREDIT CARD FORMATTING */
+.tb_credit-card-input {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #ffffff;
+}
+
+.tb_credit-card-input img {
+  width: 20px;
+  margin-right: 2px;
+  margin-left: 2px;
+}
+
+.tb_credit-card-input input[type="text"] {
+  padding: 4px;
+  border: none;
+}
+
+/* PAYMENT METHODS BUTTONS */
+.tb_paymentHeader {
+  font-weight: bold;
+  font-size: 12pt;
+}
+.tb_button-row {
+  display: flex;
+  padding-top: 4px;
+}
+
+.tb_button-row button {
+  padding: 5px;
+  margin-right: 2px;
+  border: solid 1px #cccccc;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: #ffffff;
+  color: #000000;
+  width: 25%;
+}
+.tb_button-row_active {
+  background-color: #2196f3 !important;
+  color: #ffffff !important;
+}
+
+.tb_paymentTypeLogo {
+  width: 90%;
+}
+
+/* ACH FORM */
+.tb_ach-payment-form {
+  margin-top: 10px;
+}
+
+.tb_ach-payment-form .tb_form-group {
+  margin-bottom: 10px;
+}
+
+.tb_ach-payment-form label {
+  display: block;
+}
+
+.tb_ach-payment-form input[type="text"],
+.tb_ach-payment-form input[type="number"] {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+.tb_ach-payment-form button[type="submit"] {
+  text-align: center;
+  cursor: pointer;
+  border-top-style: none;
+  border-right-style: none;
+  border-bottom-style: none;
+  border-left-style: none;
+  color: rgb(255, 255, 255);
+  background-color: rgb(255, 51, 71);
+  transition-property: filter, background-color, color;
+  transition-duration: 250ms;
+  transition-timing-function: ease;
+  height: 48px;
+  border-top-left-radius: 24px;
+  border-top-right-radius: 24px;
+  border-bottom-right-radius: 24px;
+  border-bottom-left-radius: 24px;
+  min-width: 200px;
+  padding-top: 0px;
+  width: 100%;
+  display: flex;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 900;
+  line-height: 24px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding-bottom: 0px;
+}
+.tb_paymentTypeButton {
+  height: 48px;
+  padding: 3px;
+  background-repeat: no-repeat;
+  background-size: 90%;
+  background-position: center center;
+}
+#tb_credit-card-button {
+  background-image: url(https://cdn.stage.tacklbox.io/img/common/credit_cards.png);
+}
+#tb_apple-pay-button {
+  background-image: url(https://cdn.stage.tacklbox.io/img/common/apple_pay.png);
+}
+#tb_google-pay-button {
+  background-image: url(https://cdn.stage.tacklbox.io/img/common/google_pay.png);
+}
+#tb_us-bank-account-button {
+  background-image: url(https://cdn.stage.tacklbox.io/img/common/bank_account.png);
+}
+
+.tb_tabsContent {
+  width: 95%;
+}
+.tb_paymentOptions {
+  width: 90%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  border-top: none;
+}
+
+/* TRANSACTION STYLES */
+.tb_breadcrumb {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  font-weight: normal;
+}
+
+.tb_breadcrumb li {
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.tb_breadcrumb li.active {
+  font-weight: bold;
+}
+
+.tb_breadcrumb li.tb_separator {
+  font-weight: normal;
+}
+
+.tb_invalid-field {
+  border: 1px solid red;
+}
+.tb_fieldWrapper {
+  width: 47%;
+}
+.tb_text_wrapper {
+  font-weight: bold;
+}
+.tb_text_wrapper label {
+  font-weight: normal;
+  font-size: 10pt;
+}
+.tb_number_wrapper label {
+  font-weight: normal;
+  font-size: 10pt;
+}
+.tb_tel_wrapper label {
+  font-weight: normal;
+  font-size: 10pt;
+}
+.tb_email_wrapper label {
+  font-weight: normal;
+  font-size: 10pt;
+}
+
+.tb_select_wrapper label {
+  font-weight: normal;
+  font-size: 10pt;
+}
+
+.tb_subsection {
+  font-family: arial;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.tb_sectionHeader {
+  font-weight: bold;
+  font-size: 14pt;
+  flex-basis: 100%;
+}
+.tb_subsectionHeader {
+  font-weight: bold;
+  font-size: 12pt;
+  flex-basis: 100%;
+}
+
+.tb_text_label,
+.tb_radio_label,
+.tb_select_label,
+.tb_checkbox_label,
+.tb_number_label,
+.tb_tel_label,
+.tb_email_label {
+  display: block;
+  font-size: 10pt;
+  font-family: Montserrat, sans-serif;
+}
+.tb_checkbox_label {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.tb_product_details {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.tb_shippingAddress_wrapper,
+.tb_shippingAddress2_wrapper,
+.tb_billingAddress_wrapper,
+.tb_billingAddress2_wrapper {
+  width: 100%;
+}
+.tb_shippingAddress_field,
+.tb_shippingAddress2_field,
+.tb_billingAddress_field,
+.tb_billingAddress2_field {
+  width: 92%;
+}
+.tb_firstName_wrapper,
+.tb_lastName_wrapper,
+.tb_email_wrapper,
+.tb_phone_wrapper {
+  width: 50%;
+}
+.tb_firstName_field,
+.tb_lastName_field,
+.tb_email_field,
+.tb_phone_field {
+  width: 85%;
+}
+.tb_shippingCity_wrapper,
+.tb_billingCity_wrapper,
+.tb_shippingState_wrapper,
+.tb_shippingZip_wrapper,
+.tb_billingState_wrapper,
+.tb_billingZip_wrapper {
+  flex: 1;
+  width: 30%;
+}
+.tb_shippingCity_field,
+.tb_billingCity_field,
+.tb_shippingZip_field,
+.tb_billingZip_field {
+  width: 82%;
+}
+.tb_shippingState_field,
+.tb_billingState_field {
+  width: 95%;
+}
+.tb_shippingCountry_wrapper,
+.tb_billingCountry_wrapper {
+  width: 100%;
+}
+.tb_shippingCountry_field,
+.tb_billingCountry_field {
+  width: 95%;
+}
+
+.tb_stripeWrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+.tb_stripe_card_number,
+.tb_stripe_card_number_label {
+  flex: 4;
+  font-size: 16px;
+}
+.tb_stripe_expiry,
+.tb_stripe_cvc,
+.tb_stripe_expiry_label,
+.tb_stripe_cvc_label {
+  flex: 1;
+  margin-left: 5px;
+  font-size: 16px;
+}
+.tb_checkbox_wrapper {
+  width: 100%;
+  display: flex;
+}
+.tb_select_field,
+.tb_text_field,
+.tb_email_field,
+.tb_number_field,
+.tb_tel_field {
+  font-family: Montserrat, sans-serif; /* Use a custom font */
+  font-size: 16px !important; /* Set font size */
+  padding: 8px 10px; /* Add some padding */
+  border: 1px solid #ccc; /* Define a border */
+  border-radius: 4px; /* Rounded corners */
+  background-color: #f8f8f8; /* Background color */
+  color: #333; /* Text color */
+  cursor: pointer; /* Cursor style */
+  appearance: none; /* Remove default appearance (works in modern browsers) */
+  -webkit-appearance: none; /* Remove default appearance for Webkit browsers */
+  -moz-appearance: none; /* Remove default appearance for Firefox */
+  transition: background-color 0.3s; /* Transition effect */
+}
+/* Basic styles for the <select> element */
+.tb_select_field {
+  background-image: url("https://cdn.stage.tacklbox.io/img/common/arrow-drop-down.svg");
+  background-size: 20px;
+  background-repeat: no-repeat;
+  background-position: right 12px center; /* Position the arrow on the right with some padding */
+  padding-right: 30px; /* Add right padding to prevent text overlap with the arrow */
+}
+/* Hover and focus styles */
+.tb_select_field:hover,
+.tb_select_field:focus {
+  background-color: #e8e8e8; /* Change background color */
+  outline: none; /* Remove outline */
+}
+/* Hide the default checkbox */
+input[type="checkbox"] {
+  display: none;
+}
+
+/* Style the label as the container for our custom checkbox */
+input[type="checkbox"] + label {
+  position: relative;
+  padding-left: 30px; /* Space for custom checkbox */
+  cursor: pointer;
+  display: inline-block;
+  line-height: 24px; /* Adjust based on your design */
+}
+
+/* Create the custom checkbox using the ::before pseudo-element */
+input[type="checkbox"] + label::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  border: 1px solid #ccc; /* Adjust color as needed */
+  background-color: #f8f8f8;
+  border-radius: 4px; /* Rounded corners */
+  transition: background-color 0.3s;
+}
+
+/* Style for the checked state using the ::after pseudo-element for the checkmark */
+input[type="checkbox"]:checked + label::before {
+  background-color: #333333; /* Adjust color as needed */
+}
+
+input[type="checkbox"]:checked + label::after {
+  content: "";
+  position: absolute;
+  left: 6px;
+  top: 4px;
+  width: 8px;
+  height: 15px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+/* Optional: Style for hover and focus state for enhanced user experience */
+input[type="checkbox"] + label:hover::before {
+  border-color: #999999; /* Adjust color as needed */
+}
+
+input[type="checkbox"]:focus + label::before {
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25); /* Adjust color as needed */
+}
+
+.tb_grey-out {
+  opacity: 0.3;
+}
+.tb_spinner {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  border: 5px solid #ccc;
+  border-radius: 50%;
+  border-top-color: #333;
+  animation: tb_spinner 0.6s linear infinite;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
+@keyframes tb_spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/* 
+handle mobile getting rid of the left padding / margin
+check if mobile portrait or landscape
+*/
+@media screen and (max-width: 480px) {
+  /* Styles for portrait mode */
+  .tb_overlayElement {
+    margin-left: 0% !important;
+  }
+}
