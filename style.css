@@ -1,6 +1,5 @@
 body {
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
-    sans-serif;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   font-size: 16px;
   background: linear-gradient(to bottom, #000000, #a30e1d) !important;
   min-height: 100vh;
@@ -24,6 +23,9 @@ body {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 20px;
+}
+.tb_content_holder {
+  padding: 0px 16px;
 }
 #tb_storeHeader {
   width: 100%;
@@ -210,6 +212,27 @@ object-fit: cover;
   font-weight: 500;
   line-height: normal;
   letter-spacing: -0.32px;
+  margin-bottom: 12px;
+}
+
+.tb_amount_input {
+  width: 100%;
+  padding: 16px 20px;
+  margin-top: 16px;
+
+  border-radius: 14px;
+  border: none;
+  background: #f5f8fa;
+
+  color: #000;
+
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.28px;
+  outline: none;
 }
 
 .tb_product-name {
@@ -314,6 +337,8 @@ object-fit: cover;
   background: rgba(255, 255, 255, 0.22);
 }
 .tb_button-container {
+  display: flex;
+  gap: 27px;
 }
 .tb_donation-options-button {
   width: 170px;
@@ -344,9 +369,8 @@ object-fit: cover;
   /*background-color: #45a049;*/ /* Darker green on hover */
 }
 .tb_donation-options-button_selected {
-  border: solid 2px rgb(224, 1, 34);
-  color: #5d625f;
-  background-color: rgb(224, 1, 34, 0.4);
+  border: 1px solid #ef0325;
+  background: rgba(239, 3, 37, 0.07);
 }
 
 .tb_donate-button {
