@@ -117,16 +117,16 @@ body {
   display: none !important;
 }
 
-.tb_text_label {
-  margin-bottom: 12px;
-  color: #000;
+.tb_text_label, .tb_email_wrapper, .tb_tel_labeltb_tel_label {
+  margin-bottom: 12px !important;
+  color: #000 !important;
 
-  font-family: Poppins;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
-  letter-spacing: -0.32px;
+  font-family: Poppins !important;
+  font-size: 16px !important;
+  font-style: normal !important;
+  font-weight: 500 !important;
+  line-height: normal !important;
+  letter-spacing: -0.32px !important;
 }
 
 .tb_product-grid {
