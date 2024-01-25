@@ -241,21 +241,21 @@ object-fit: cover;
 
 .tb_amount_input,
 .tb_text_field {
-  padding: 16px 20px;
+  padding: 16px 20px !important;
 
-  border-radius: 14px;
-  border: none;
-  background: #f5f8fa;
+  border-radius: 14px !important;
+  border: none !important;
+  background: #f5f8fa !important;
 
-  color: #000;
+  color: #000 !important;
 
-  font-family: Poppins;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  letter-spacing: -0.28px;
-  outline: none;
+  font-family: Poppins !important;
+  font-size: 14px !important;
+  font-style: normal !important;
+  font-weight: 400 !important;
+  line-height: normal !important;
+  letter-spacing: -0.28px !important;
+  outline: none !important;
 }
 
 .tb_amount_input {
