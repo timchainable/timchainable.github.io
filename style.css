@@ -791,17 +791,28 @@ object-fit: cover;
 .tb_billingAddress2_field {
   width: 92%;
 }
-.tb_firstName_wrapper,
-.tb_lastName_wrapper,
 .tb_email_wrapper,
 .tb_phone_wrapper {
-  width: 50%;
+  width: 100%;
 }
-.tb_firstName_field,
-.tb_lastName_field,
+.tb_email_wrapper {
+  margin-bottom: 16px;
+}
+.tb_firstName_wrapper {
+  width: 52%;
+  margin-bottom: 16px;
+}
+.tb_lastName_wrapper {
+  width: 48%;
+  margin-bottom: 16px;
+}
 .tb_email_field,
 .tb_phone_field {
-  width: 85%;
+  width: 723px;
+}
+.tb_firstName_field,
+.tb_lastName_field {
+  width: 328px;
 }
 .tb_shippingCity_wrapper,
 .tb_billingCity_wrapper,
