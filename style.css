@@ -106,15 +106,15 @@ body {
 }
 
 .tb_donation_total {
-  display: none;
+  display: none !important;
 }
 
 .tb_breadcrumb {
-  display: none;
+  display: none !important;
 }
 
 .tb_subsectionHeader {
-  display: none;
+  display: none !important;
 }
 
 .tb_text_label {
