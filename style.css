@@ -102,7 +102,31 @@ body {
   display: block;
 }
 .tb_back {
-  /*display: none;*/
+  display: none !important;
+}
+
+.tb_donation_total {
+  display: none;
+}
+
+.tb_breadcrumb {
+  display: none;
+}
+
+.tb_subsectionHeader {
+  display: none;
+}
+
+.tb_text_label {
+  margin-bottom: 12px;
+  color: #000;
+
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: -0.32px;
 }
 
 .tb_product-grid {
@@ -215,10 +239,9 @@ object-fit: cover;
   margin-bottom: 12px;
 }
 
-.tb_amount_input {
-  width: 100%;
+.tb_amount_input,
+.tb_text_field {
   padding: 16px 20px;
-  margin-top: 16px;
 
   border-radius: 14px;
   border: none;
@@ -233,6 +256,11 @@ object-fit: cover;
   line-height: normal;
   letter-spacing: -0.28px;
   outline: none;
+}
+
+.tb_amount_input {
+  width: 100%;
+  margin-top: 16px;
 }
 
 .tb_product-name {
