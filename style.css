@@ -117,7 +117,9 @@ body {
   display: none !important;
 }
 
-.tb_text_label, .tb_email_label, .tb_tel_label {
+.tb_text_label,
+.tb_email_label,
+.tb_tel_label {
   margin-bottom: 12px !important;
   color: #000 !important;
 
@@ -240,7 +242,11 @@ object-fit: cover;
 }
 
 .tb_amount_input,
-.tb_text_field {
+.tb_select_field,
+.tb_text_field,
+.tb_email_field,
+.tb_number_field,
+.tb_tel_field {
   padding: 16px 20px !important;
 
   border-radius: 14px !important;
@@ -846,25 +852,6 @@ object-fit: cover;
   width: 100%;
   display: flex;
 }
-.tb_select_field,
-.tb_text_field,
-.tb_email_field,
-.tb_number_field,
-.tb_tel_field {
-  font-family: Montserrat, sans-serif; /* Use a custom font */
-  font-size: 16px !important; /* Set font size */
-  padding: 8px 10px; /* Add some padding */
-  border: 1px solid #ccc; /* Define a border */
-  border-radius: 4px; /* Rounded corners */
-  background-color: #f8f8f8; /* Background color */
-  color: #333; /* Text color */
-  cursor: pointer; /* Cursor style */
-  appearance: none; /* Remove default appearance (works in modern browsers) */
-  -webkit-appearance: none; /* Remove default appearance for Webkit browsers */
-  -moz-appearance: none; /* Remove default appearance for Firefox */
-  transition: background-color 0.3s; /* Transition effect */
-}
-/* Basic styles for the <select> element */
 .tb_select_field {
   background-image: url("https://cdn.stage.tacklbox.io/img/common/arrow-drop-down.svg");
   background-size: 20px;
