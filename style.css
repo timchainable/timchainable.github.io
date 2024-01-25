@@ -7,6 +7,8 @@ body {
 }
 .tb_container {
   width: 827px;
+  position: relative;
+  right: 30px;
 
   border-radius: 21px;
   background-color: #ffffff;
