@@ -332,7 +332,7 @@ object-fit: cover;
   bottom: 0;
   text-align: center;
   background-color: #ffffff;
-  margin: 20px;
+  margin-top: 44px;
 }
 /* BUTTONS */
 .tb_quantity-label {
@@ -349,6 +349,10 @@ object-fit: cover;
   border-radius: 100px;
   transition: background 0.1s;
   cursor: pointer;
+}
+.tb_button_active {
+  background-color: #EF0325 !important;
+  box-shadow: 0px 19px 53.1px 0px rgba(239, 3, 37, 0.29) !important;
 }
 .tb_button_holder {
   display: flex;
